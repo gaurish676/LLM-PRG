@@ -1,0 +1,28 @@
+{
+  "name": "llm-prg",
+  "version": "1.0.0",
+  "main": "dist/src/index.js",
+  "bin": {
+    "lars": "./dist/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/tests/runner.js",
+    "abort": "node dist/src/index.js abort",
+    "chat": "node dist/src/index.js chat",
+    "scan": "node dist/src/index.js scan",
+    "status": "node dist/src/index.js status",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "LARS (Local Agent Reasoning Scheduler) is a lightweight, CPU-efficient offline developer tool and reasoning router.",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}
