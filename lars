@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+const path = require('path');
+
+// Dynamically execute the compiled entry point
+require(path.join(__dirname, 'dist', 'src', 'index.js'));
